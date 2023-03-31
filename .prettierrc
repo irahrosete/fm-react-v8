@@ -1,1 +1,6 @@
-{}
+{
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "semi": false
+}
