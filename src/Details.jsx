@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
+import ErrorBoundary from './ErrorBoundary'
 import Carousel from './Carousel'
 import fetchPet from './fetchPet'
 
@@ -32,4 +33,15 @@ const Details = () => {
   )
 }
 
-export default Details
+// ErrorBoundary needs to have a component that wraps it (DetailsErrorBoundary) 
+// so it wraps the component that it catches errors from (Details)
+function DetailsErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  )
+  // props spread operator is fine as it is just a pass-through. otherwise, need to be explicit with props
+}
+
+export default DetailsErrorBoundary
