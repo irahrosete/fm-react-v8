@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 const Pet = ({ id, name, animal, breed, images, location }) => {
   let hero = 'http://pets-images.dev-apis.com/pets/none.jpg'

@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom"
-import { useQuery } from "@tanstack/react-query"
-import fetchPet from "./fetchPet"
+import { useParams } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query'
+import fetchPet from './fetchPet'
 
 const Details = () => {
   const { id } = useParams()
@@ -8,8 +8,8 @@ const Details = () => {
 
   if (results.isLoading) {
     return (
-      <div className="loading-pane">
-        <h2 className="loader">🐾</h2>
+      <div className='loading-pane'>
+        <h2 className='loader'>🐾</h2>
       </div>
     )
   }
@@ -17,7 +17,7 @@ const Details = () => {
   const pet = results.data.pets[0]
 
   return (
-    <div className="details">
+    <div className='details'>
       <div>
         <h2>{pet.name}</h2>
         <h2>
